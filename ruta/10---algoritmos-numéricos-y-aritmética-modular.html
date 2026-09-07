@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr"><head><title>10 - Algoritmos numéricos y aritmética modular</title><meta charset="utf-8"/><link rel="preload" href="../index-2c388584.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Entrenamiento OCI · IOI"/><meta property="og:title" content="10 - Algoritmos numéricos y aritmética modular"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="10 - Algoritmos numéricos y aritmética modular"/><meta name="twitter:description" content="10 · Algoritmos numéricos y aritmética modular Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta property="og:description" content="10 · Algoritmos numéricos y aritmética modular Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta property="og:image:alt" content="10 · Algoritmos numéricos y aritmética modular Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta property="twitter:domain" content="flizamar.github.io/entrenamiento-ioi-web"/><meta property="og:url" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/10---algoritmos-numéricos-y-aritmética-modular"/><meta property="twitter:url" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/10---algoritmos-numéricos-y-aritmética-modular"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="10 · Algoritmos numéricos y aritmética modular Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta name="generator" content="Quartz"/><link href="../index-2c388584.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/10---algoritmos-numéricos-y-aritmética-modular-og-image.webp"/><meta property="og:image:url" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/10---algoritmos-numéricos-y-aritmética-modular-og-image.webp"/><meta name="twitter:image" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/10---algoritmos-numéricos-y-aritmética-modular-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="ruta/10---algoritmos-numéricos-y-aritmética-modular" data-basepath="/entrenamiento-ioi-web"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Entrenamiento OCI · IOI</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Buscar" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Buscar</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Buscar algo..." placeholder="Buscar algo..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Modo oscuro"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Modo oscuro"><title>Modo oscuro</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Modo claro"><title>Modo claro</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Modo lector"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Modo lector"><title>Modo lector</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a, b) => { const orden = [\&quot;ruta\&quot;, \&quot;referencia\&quot;, \&quot;ioi\&quot;, \&quot;oci\&quot;]; const ra = orden.indexOf(a.slugSegment), rb = orden.indexOf(b.slugSegment); if (ra !== -1 &amp;&amp; rb !== -1) return ra - rb; if (ra !== -1) return -1; if (rb !== -1) return 1; if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1; return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: \&quot;base\&quot; }); }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-294" aria-label="Explorador"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorador</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-294" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../ruta/">Ruta de Aprendizaje</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>10 - Algoritmos numéricos y aritmética modular</a></div></nav><h1 class="article-title">10 - Algoritmos numéricos y aritmética modular</h1><details class="note-properties metadata-container" open data-collapsed="false"><summary class="note-properties-header"><span class="note-properties-title">Properties</span><span class="note-properties-count">1</span></summary><table class="note-properties-table"><tbody><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">tags</td><td class="note-properties-value metadata-property-value"><span class="note-properties-tags"><a href="../tags/ruta" class="internal internal-link tag-link">ruta</a></span></td></tr></tbody></table></details><p show-comma="true" class="content-meta"><time datetime="2026-09-07T23:22:56.834Z">07 sept 2026</time><span>Se lee en 9 min</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="10--algoritmos-numéricos-y-aritmética-modular">10 · Algoritmos numéricos y aritmética modular<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#10--algoritmos-numéricos-y-aritmética-modular" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Buscar soluciones eficientes</strong> · <a href="../ruta/ruta-de-aprendizaje" class="internal internal-link alias" data-slug="ruta/ruta-de-aprendizaje">Ruta de Aprendizaje</a></p>
+<p><strong>Antes de empezar.</strong> Ciclos, funciones y el operador resto <code>%</code>: <a href="../ruta/00---programar-desde-cero" class="internal internal-link alias" data-slug="ruta/00---programar-desde-cero">00 - Programar desde cero</a>; vectores: <a href="../ruta/03---arreglos-y-búsqueda-lineal" class="internal internal-link alias" data-slug="ruta/03---arreglos-y-búsqueda-lineal">03 - Arreglos y búsqueda lineal</a>.</p>
+<h2 id="-objetivos">🎯 Objetivos<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-objetivos" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Al terminar este módulo sabes:</p>
+<ul>
+<li>Dominar <code>%</code>: dígitos, ciclos, y el caso traicionero de los negativos.</li>
+<li>Testear primalidad en O(√n) y calcular MCD/MCM respetando los límites numéricos.</li>
+<li>Trabajar módulo 10⁹+7 y elevar a potencias gigantes en O(log e).</li>
+</ul>
+<h2 id="-la-lección">📖 La lección<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-la-lección" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Esta clase tiene tres preguntas: <a href="#el-operador--a-fondo" class="internal internal-link alias">¿dónde quedo tras dar vueltas?</a>, <a href="#mcd-y-mcm" class="internal internal-link alias">¿qué divisores comparten dos números?</a> y <a href="#aritm%C3%A9tica-modular" class="internal internal-link alias">¿cómo calcular potencias sin multiplicar una vez por cada unidad del exponente?</a>. Cada tramo desarrolla una herramienta distinta.</p>
+<h3 id="el-operador--a-fondo">El operador <code>%</code> a fondo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#el-operador--a-fondo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Antes de nada, una imagen que sirve para todo el módulo: <strong>trabajar módulo M es
+trabajar en un reloj de M horas</strong>. Al llegar a M, vuelves al 0.</p>
+
+<div class="dg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable: Reloj de 5 horas: contar 7 pasos desde 0 termina en 2" style="max-width:100%;overflow-x:auto;"><svg viewBox="0 0 300 200" width="100%" style="max-width:320px;min-width:300px;height:auto;" role="img" aria-label="Reloj de 5 horas: contar 7 pasos desde 0 termina en 2" xmlns="http://www.w3.org/2000/svg"><style>.dg-t{font:600 13px system-ui,sans-serif;fill:currentColor}.dg-s{font:400 11px system-ui,sans-serif;fill:currentColor;opacity:.72}.dg-m{font:500 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:currentColor}.dg-l{stroke:currentColor;fill:none}.dg-p{stroke:currentColor}</style><defs><marker id="a-10-reloj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="currentColor"></path></marker></defs><circle cx="150" cy="100" r="62" class="dg-p" stroke-width="1.25" fill="currentColor" fill-opacity="0" opacity="0.35"></circle><path d="M 175.3 43.4 A 62 62 0 0 1 196.0 58.5" class="dg-l" stroke-width="2" marker-end="url(#a-10-reloj)"></path><circle cx="150" cy="38" r="15" class="dg-p" stroke-width="1.25" fill="currentColor" fill-opacity="0.05"></circle><text x="150" y="42.5" text-anchor="middle" class="dg-t">0</text><circle cx="209" cy="80.8" r="15" class="dg-p" stroke-width="1.25" fill="currentColor" fill-opacity="0.05"></circle><text x="209" y="85.3" text-anchor="middle" class="dg-t">1</text><circle cx="186.4" cy="150.2" r="15" class="dg-p" stroke-width="2" fill="currentColor" fill-opacity="0.18"></circle><text x="186.4" y="154.7" text-anchor="middle" class="dg-t">2</text><circle cx="113.6" cy="150.2" r="15" class="dg-p" stroke-width="1.25" fill="currentColor" fill-opacity="0.05"></circle><text x="113.6" y="154.7" text-anchor="middle" class="dg-t">3</text><circle cx="91" cy="80.8" r="15" class="dg-p" stroke-width="1.25" fill="currentColor" fill-opacity="0.05"></circle><text x="91" y="85.3" text-anchor="middle" class="dg-t">4</text><text x="150" y="98" text-anchor="middle" class="dg-t">7 % 5 = 2</text><text x="150" y="115" text-anchor="middle" class="dg-s">una vuelta + 2</text><text x="150" y="190" text-anchor="middle" class="dg-s">contar 7 pasos desde el 0 termina en el 2</text></svg></div><p class="dg-ayuda">Desliza el diagrama para verlo completo.</p>
+
+<p>Por eso <code>7 % 5</code> es 2: das una vuelta completa (5) y te sobran 2.</p>
+<p><strong>Desarmar un número en dígitos.</strong> <code>n % 10</code> te da el último dígito y <code>n / 10</code>
+te lo quita. Sigue la traza con 4025:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>paso</th><th>n</th><th><code>n % 10</code> (el dígito)</th><th><code>n / 10</code> (lo que queda)</th></tr></thead><tbody><tr><td>1</td><td>4025</td><td><strong>5</strong></td><td>402</td></tr><tr><td>2</td><td>402</td><td><strong>2</strong></td><td>40</td></tr><tr><td>3</td><td>40</td><td><strong>0</strong></td><td>4</td></tr><tr><td>4</td><td>4</td><td><strong>4</strong></td><td>0 ← se acabó</td></tr></tbody></table></div>
+<p>Los dígitos salen <strong>al revés</strong> (5, 2, 0, 4). Si los necesitas en orden, guárdalos
+y da vuelta el arreglo.</p>
+<p><strong>El caso traicionero: los negativos.</strong> En C++, <code>-7 % 3</code> NO es 2, es −1. La
+razón es que la división entera <strong>trunca hacia el cero</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th><code>7 % 3</code></th><th><code>-7 % 3</code></th></tr></thead><tbody><tr><td>C++ calcula primero</td><td><code>7 / 3</code> = <strong>2</strong></td><td><code>-7 / 3</code> = <strong>−2</strong> (no −3: trunca hacia el 0)</td></tr><tr><td>y después el resto</td><td>7 − 3·2 = <strong>1</strong></td><td>−7 − 3·(−2) = <strong>−1</strong></td></tr><tr><td>lo que casi siempre querías</td><td>1 ✅</td><td>2 ❌</td></tr></tbody></table></div>
+<p>En un reloj de tres posiciones, −7 equivale a retroceder una posición
+después de descontar dos vueltas completas: llegas al 2. El resto −1
+representa esa misma posición, escrita de otra forma. El arreglo es
+darle una vuelta completa:</p>
+<p>En este ejemplo usamos <code>1 &lt;= m &lt;= 10⁹+7</code>, de modo que sumar m al resto cabe en <code>long long</code>.</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> mod_positivo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> x</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> m</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> ((x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> m) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> m) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> m;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"> // -7 -> -1 -> -1+3 = 2 ✅</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<p>Cuando el problema <strong>resta</strong> cosas módulo m, ese envoltorio evita respuestas
+negativas fantasma. Es de los errores que más caro salen porque el código se
+ve bien.</p>
+<h3 id="primalidad-en-on">Primalidad en O(√n)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#primalidad-en-on" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>La regla se enuncia así: <em>“basta probar divisores hasta √n”</em>. Y suena a magia
+hasta que la dibujas. Mira todos los divisores de 36, emparejados:</p>
+
+<div class="dg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable: Los divisores de 36 se emparejan en espejo alrededor de su raíz" style="max-width:100%;overflow-x:auto;"><svg viewBox="0 0 560 194" width="100%" style="max-width:620px;min-width:560px;height:auto;" role="img" aria-label="Los divisores de 36 se emparejan en espejo alrededor de su raíz" xmlns="http://www.w3.org/2000/svg"><style>.dg-t{font:600 13px system-ui,sans-serif;fill:currentColor}.dg-s{font:400 11px system-ui,sans-serif;fill:currentColor;opacity:.72}.dg-m{font:500 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:currentColor}.dg-l{stroke:currentColor;fill:none}.dg-p{stroke:currentColor}</style><line x1="34" y1="128" x2="520" y2="128" class="dg-l" stroke-width="1.25" opacity="0.4"></line><path d="M 34.0 122 Q 277 -62 520.0 122" class="dg-l" stroke-width="1.2" opacity="0.6"></path><text x="277" y="24" text-anchor="middle" class="dg-s">1 × 36</text><path d="M 128.0 122 Q 277 -18 426.0 122" class="dg-l" stroke-width="1.2" opacity="0.6"></path><text x="277" y="46" text-anchor="middle" class="dg-s">2 × 18</text><path d="M 183.0 122 Q 277 26 371.0 122" class="dg-l" stroke-width="1.2" opacity="0.6"></path><text x="277" y="68" text-anchor="middle" class="dg-s">3 × 12</text><path d="M 222.0 122 Q 277 70 332.0 122" class="dg-l" stroke-width="1.2" opacity="0.6"></path><text x="277" y="90" text-anchor="middle" class="dg-s">4 × 9</text><line x1="277" y1="104" x2="277" y2="136" class="dg-l" stroke-width="1.3" opacity="0.8" stroke-dasharray="4 3"></line><circle cx="34" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="34" y="147" text-anchor="middle" class="dg-s">1</text><circle cx="128" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="128" y="147" text-anchor="middle" class="dg-s">2</text><circle cx="183" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="183" y="147" text-anchor="middle" class="dg-s">3</text><circle cx="222" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="222" y="147" text-anchor="middle" class="dg-s">4</text><circle cx="332" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="332" y="147" text-anchor="middle" class="dg-s">9</text><circle cx="371" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="371" y="147" text-anchor="middle" class="dg-s">12</text><circle cx="426" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="426" y="147" text-anchor="middle" class="dg-s">18</text><circle cx="520" cy="128" r="3.5" fill="currentColor" fill-opacity="0.5"></circle><text x="520" y="147" text-anchor="middle" class="dg-s">36</text><circle cx="277" cy="128" r="5" fill="currentColor" fill-opacity="1"></circle><text x="277" y="147" text-anchor="middle" class="dg-t">6</text><text x="277" y="164" text-anchor="middle" class="dg-t">√36 = 6</text><text x="280" y="184" text-anchor="middle" class="dg-s">cada divisor chico tiene un socio grande, y el par se refleja en la raíz</text></svg></div><p class="dg-ayuda">Desliza el diagrama para verlo completo.</p>
+
+<p><strong>Los divisores vienen de a pares, y cada par se refleja en √n.</strong> Uno es menor o igual que la raíz y el otro mayor o igual. En 36, el par central es 6×6: hay que incluir la igualdad. Buscamos divisores desde 2, porque el par trivial 1×n existe incluso cuando n es primo. Si un compuesto tuviera un divisor grande, tendría también un socio entre 2 y √n.</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">bool</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> es_primo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> n</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">   // i*i &lt;= n es &quot;i &lt;= raíz de n&quot;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">        // lo pillamos: tiene socio</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<p>Fíjate en <code>i * i &lt;= n</code> en vez de <code>i &lt;= sqrt(n)</code>: evita los decimales, que en
+números grandes redondean mal y te hacen perder un caso. Aquí suponemos
+<code>n &lt;= 10¹²</code>, por lo que <code>i*i</code> cabe en <code>long long</code>. El costo sigue siendo
+O(√n): aumentar mucho n o hacer muchas consultas puede volverlo demasiado lento.</p>
+<p>¿Y si necesitas <strong>muchos</strong> primos chicos en vez de uno grande?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Lo que necesitas</th><th>Qué usar</th><th>Costo</th></tr></thead><tbody><tr><td>¿este número es primo? (uno grande)</td><td>probar hasta la raíz</td><td>O(√n)</td></tr><tr><td>todos los primos hasta n (muchos chicos)</td><td><a href="../referencia/algoritmos/criba-de-eratóstenes" class="internal internal-link alias" data-slug="referencia/algoritmos/criba-de-eratóstenes">criba de Eratóstenes</a></td><td>O(n log log n)</td></tr><tr><td>en qué primos se descompone</td><td><a href="../referencia/algoritmos/factorización" class="internal internal-link alias" data-slug="referencia/algoritmos/factorización">Factorización</a></td><td>O(√n)</td></tr></tbody></table></div>
+<h3 id="mcd-y-mcm">MCD y MCM<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mcd-y-mcm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>El <strong>máximo común divisor</strong> tiene un dibujo exacto: <code>mcd(48, 18)</code> es el lado
+del <strong>cuadrado más grande con que puedes embaldosar</strong> un rectángulo de 48×18
+sin cortar ninguna baldosa. Y el algoritmo de Euclides es literalmente ir
+sacando el cuadrado más grande que quepa, una y otra vez, hasta que lo que
+sobra sea un cuadrado perfecto.</p>
+
+<div class="dg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable: Un rectángulo de 48 por 18 embaldosado con cuadrados: el más chico mide 6" style="max-width:100%;overflow-x:auto;"><svg viewBox="0 0 392 190" width="100%" style="max-width:430px;min-width:392px;height:auto;" role="img" aria-label="Un rectángulo de 48 por 18 embaldosado con cuadrados: el más chico mide 6" xmlns="http://www.w3.org/2000/svg"><style>.dg-t{font:600 13px system-ui,sans-serif;fill:currentColor}.dg-s{font:400 11px system-ui,sans-serif;fill:currentColor;opacity:.72}.dg-m{font:500 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:currentColor}.dg-l{stroke:currentColor;fill:none}.dg-p{stroke:currentColor}</style><rect x="22" y="26" width="355.2" height="133.2" class="dg-p" stroke-width="1.6" fill="currentColor" fill-opacity="0"></rect><rect x="22" y="26" width="133.2" height="133.2" class="dg-p" stroke-width="1.1" fill="currentColor" fill-opacity="0.05"></rect><text x="88.6" y="96.6" text-anchor="middle" class="dg-s">18</text><rect x="155.2" y="26" width="133.2" height="133.2" class="dg-p" stroke-width="1.1" fill="currentColor" fill-opacity="0.05"></rect><text x="221.8" y="96.6" text-anchor="middle" class="dg-s">18</text><rect x="288.4" y="26" width="88.8" height="88.8" class="dg-p" stroke-width="1.1" fill="currentColor" fill-opacity="0.05"></rect><text x="332.8" y="74.4" text-anchor="middle" class="dg-s">12</text><rect x="288.4" y="114.8" width="44.4" height="44.4" class="dg-p" stroke-width="1.1" fill="currentColor" fill-opacity="0.13"></rect><text x="310.6" y="141" text-anchor="middle" class="dg-t">6</text><rect x="332.8" y="114.8" width="44.4" height="44.4" class="dg-p" stroke-width="1.1" fill="currentColor" fill-opacity="0.13"></rect><text x="355" y="141" text-anchor="middle" class="dg-t">6</text><text x="199.6" y="16" text-anchor="middle" class="dg-s">48</text><text x="13" y="92.6" text-anchor="middle" class="dg-s" transform="rotate(-90 13 92.6)">18</text><text x="14" y="181" text-anchor="start" class="dg-s">el cuadrado más chico que aparece es 6 = mcd(48, 18)</text></svg></div><p class="dg-ayuda">Desliza el diagrama para verlo completo.</p>
+
+<p>En números, sigue la traza:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>paso</th><th>a</th><th>b</th><th><code>a % b</code> (lo que sobra)</th></tr></thead><tbody><tr><td>1</td><td>48</td><td>18</td><td>48 % 18 = <strong>12</strong></td></tr><tr><td>2</td><td>18</td><td>12</td><td>18 % 12 = <strong>6</strong></td></tr><tr><td>3</td><td>12</td><td>6</td><td>12 % 6 = <strong>0</strong></td></tr><tr><td>4</td><td><strong>6</strong></td><td>0</td><td>b llegó a 0 → la respuesta es <strong>6</strong></td></tr></tbody></table></div>
+<p>En cada paso el par se hace más chico, y <code>b</code> termina siempre en 0. Lo que
+queda en <code>a</code> es el MCD.</p>
+<p>¿Por qué conserva el MCD? Como <code>48 = 2·18 + 12</code>, cualquier divisor de 48 y 18 también divide 12. A la inversa, un divisor de 18 y 12 divide <code>2·18+12=48</code>. Por tanto, los divisores comunes de <code>(48,18)</code> y <code>(18,12)</code> son exactamente los mismos. Cada paso de Euclides conserva esa información y reduce el segundo número.</p>
+<p>El <strong>mínimo común múltiplo</strong> es el menor entero positivo divisible por
+ambos números. Para 48 y 18 es 144. Se obtiene con <code>a / mcd(a,b) * b</code>.
+En este ejemplo a y b son positivos y el MCM debe caber en <code>long long</code>.</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> mcd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> b</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    while</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">!=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) { a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> b; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">swap</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(a, b); }</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"> // Euclides iterativo</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> a;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// Divide ANTES de multiplicar; el resultado debe caber en long long</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// supone: long long a, b;  // a > 0, b > 0</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> mcm </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">/</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> mcd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(a, b) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> b;</span></span></code></pre></figure>
+<p>C++17 trae <code>gcd(a, b)</code> y <code>lcm(a, b)</code> listos, pero saber Euclides es parte del
+oficio (la teoría, en <a href="../referencia/algoritmos/euclides-extendido-(gcd)" class="internal internal-link alias" data-slug="referencia/algoritmos/euclides-extendido-(gcd)">Euclides extendido (gcd)</a>). El orden <code>a / mcd * b</code>
+importa: <code>a * b</code> primero puede desbordar aunque el MCM quepa perfectamente.</p>
+<h3 id="aritmética-modular">Aritmética modular<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aritmética-modular" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Cuando la respuesta “puede ser enorme”, los enunciados piden el resultado
+módulo 10⁹+7. La regla es simple: aplica <code>% M</code> <strong>después de cada operación</strong>
+— la suma y el producto lo toleran perfecto, porque el reloj no se entera de
+las vueltas completas que diste.</p>
+<p>Y para potencias gigantes, el truco es no multiplicar <code>e</code> veces sino ir
+<strong>elevando al cuadrado</strong>:</p>
+<p>La función siguiente supone <code>b >= 0</code>, <code>e >= 0</code> y <code>2 &lt;= M &lt;= 10⁹+7</code>.
+Así los productos de dos residuos caben en <code>long long</code>. Si necesitas una
+base negativa, normalízala con <code>mod_positivo</code> antes de llamar.</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> potmod</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> b</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> e</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important"> M</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> r </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> M;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    while</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (e </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (e </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) r </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> r </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> M;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"> // exponente impar: multiplica una vez</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> M;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">                 // cuadrado en cada paso</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        e </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">/=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">                        // y la mitad del exponente</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    }</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> r;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<p>La traza de <code>potmod(3, 13, 1000)</code> — o sea 3¹³ módulo 1000:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>e</th><th>¿impar?</th><th>r (la respuesta que se arma)</th><th>b (se va elevando al cuadrado)</th></tr></thead><tbody><tr><td>13</td><td>sí → multiplica</td><td>1 · 3 = <strong>3</strong></td><td>3² = 9</td></tr><tr><td>6</td><td>no</td><td>3</td><td>9² = 81</td></tr><tr><td>3</td><td>sí → multiplica</td><td>3 · 81 = <strong>243</strong></td><td>81² = 6561 → 561</td></tr><tr><td>1</td><td>sí → multiplica</td><td>243 · 561 = 136323 → <strong>323</strong></td><td>—</td></tr><tr><td>0</td><td>fin</td><td><strong>323</strong></td><td></td></tr></tbody></table></div>
+<p>Y acá está lo bonito:</p>
+
+<div class="dg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable: El exponente 13 se descompone en 8 más 4 más 1" style="max-width:100%;overflow-x:auto;"><svg viewBox="0 0 430 104" width="100%" style="max-width:500px;min-width:430px;height:auto;" role="img" aria-label="El exponente 13 se descompone en 8 más 4 más 1" xmlns="http://www.w3.org/2000/svg"><style>.dg-t{font:600 13px system-ui,sans-serif;fill:currentColor}.dg-s{font:400 11px system-ui,sans-serif;fill:currentColor;opacity:.72}.dg-m{font:500 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:currentColor}.dg-l{stroke:currentColor;fill:none}.dg-p{stroke:currentColor}</style><rect x="28" y="34" width="208" height="34" class="dg-p" stroke-width="1.3" fill="currentColor" fill-opacity="0.08"></rect><text x="132" y="56" text-anchor="middle" class="dg-t">8</text><rect x="242" y="34" width="104" height="34" class="dg-p" stroke-width="1.3" fill="currentColor" fill-opacity="0.08"></rect><text x="294" y="56" text-anchor="middle" class="dg-t">4</text><rect x="352" y="34" width="26" height="34" class="dg-p" stroke-width="1.3" fill="currentColor" fill-opacity="0.08"></rect><text x="365" y="56" text-anchor="middle" class="dg-t">1</text><text x="20" y="22" text-anchor="start" class="dg-s">el exponente 13 se arma con potencias de 2…</text><text x="20" y="90" text-anchor="start" class="dg-s">…y potmod multiplica justo en esos tres pasos: 3⁸ · 3⁴ · 3¹ = 3¹³</text></svg></div><p class="dg-ayuda">Desliza el diagrama para verlo completo.</p>
+
+<p>Lo que descomponemos como suma de potencias de dos es el <strong>exponente</strong>: 13 = 8+4+1. La potencia resulta de un <strong>producto</strong>: 3¹³ = 3⁸·3⁴·3. Durante el ciclo, <code>r · b^e</code> conserva el resultado buscado módulo M: si e es impar, se pasa un factor b a r; después se agrupan por parejas los factores restantes.</p>
+<p>Para 2⁶⁰, el exponente recorre <code>60,30,15,7,3,1</code>: son <strong>seis vueltas</strong>, con seis cuadrados y cuatro multiplicaciones en r. Un exponente cercano a 2⁶⁰ sí requeriría unas 60 vueltas. Ficha completa: <a href="../referencia/algoritmos/exponenciación-rápida-(modular)" class="internal internal-link alias" data-slug="referencia/algoritmos/exponenciación-rápida-(modular)">Exponenciación rápida (modular)</a>.</p>
+<p>(La división modular es otra historia — y el <a href="../ioi/syllabus-ioi" class="internal internal-link alias" data-slug="ioi/syllabus-ioi">Syllabus IOI</a> la deja
+explícitamente fuera.)</p>
+<h2 id="️-práctica">🏋️ Práctica<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-práctica" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="práctica-directa-tres-herramientas-numéricas">Práctica directa: Tres herramientas numéricas<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#práctica-directa-tres-herramientas-numéricas" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Calcula la posición al retroceder 5 desde 2 en un reloj de 10 posiciones; luego MCD(48,18); después 3¹³ módulo 1000. Resultados: <code>7</code>, <code>6</code>, <code>323</code>.</p>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Idea para comprobar tu solución </p></div>
+                  <div class="fold-callout-icon callout-fold"></div>
+                </div>
+<div class="callout-content">
+<p>Normaliza el resto negativo, conserva divisores comunes con Euclides y descompón el exponente para la potencia. Son tres preguntas distintas, no una fórmula única.</p>
+</div>
+</blockquote>
+<h3 id="aplicar-en-problemas">Aplicar en problemas<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aplicar-en-problemas" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Los problemas siguientes requieren traducir un enunciado y pueden combinar otras ideas. Su procedencia e idioma no indican un orden obligatorio de dificultad.</p>
+<p>Problemas OCI reales, en español (cada nota trae el link a su mirror):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>#</th><th>Problema</th><th>Fase</th><th>Qué practica</th></tr></thead><tbody><tr><td>1</td><td><a href="../oci/2019/el-candado-del-basurero-(oci-2019-nacional)" class="internal internal-link alias" data-slug="oci/2019/el-candado-del-basurero-(oci-2019-nacional)">El candado del basurero</a></td><td>Nacional 2019</td><td>distancias en aritmética módulo 10</td></tr><tr><td>2</td><td><a href="../oci/2022/daniela-y-los-múltiplos-(oci-2022-regional)" class="internal internal-link alias" data-slug="oci/2022/daniela-y-los-múltiplos-(oci-2022-regional)">Daniela y los múltiplos</a></td><td>Regional 2022</td><td>múltiplos con saltos</td></tr><tr><td>3</td><td><a href="../oci/2023/balancín-(oci-2023-nacional)" class="internal internal-link alias" data-slug="oci/2023/balancín-(oci-2023-nacional)">Balancín</a></td><td>Nacional 2023</td><td>el MCD resolviendo una ecuación</td></tr><tr><td>4</td><td>⭐ <a href="../oci/2015/gollum-vs-golomb-(oci-2015-nacional)" class="internal internal-link alias" data-slug="oci/2015/gollum-vs-golomb-(oci-2015-nacional)">Gollum vs Golomb</a></td><td>Nacional 2015</td><td>recurrencias con n hasta 10¹⁰ y <code>long long</code></td></tr><tr><td>5</td><td>⭐⭐ <a href="../oci/2020/catalonia-(oci-2020-nacional)" class="internal internal-link alias" data-slug="oci/2020/catalonia-(oci-2020-nacional)">Catalonia</a></td><td>Nacional 2020</td><td>coordenadas en espiral hexagonal hasta 10¹⁸</td></tr></tbody></table></div>
+<h3 id="más-aplicaciones-en-inglés">Más aplicaciones (en inglés)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#más-aplicaciones-en-inglés" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>#</th><th>Problema</th><th>Dificultad</th><th>Qué practica</th></tr></thead><tbody><tr><td>1</td><td><a href="https://codeforces.com/problemset/problem/1370/A" class="external external-link" target="_blank">Maximum GCD (1370A)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★ (800)</td><td>pensar el MCD, no calcularlo</td></tr><tr><td>2</td><td><a href="https://codeforces.com/problemset/problem/26/A" class="external external-link" target="_blank">Almost Prime (26A)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★★ (900)</td><td>divisores primos con √n</td></tr><tr><td>3</td><td><a href="https://codeforces.com/problemset/problem/913/A" class="external external-link" target="_blank">Modular Exponentiation (913A)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★★ (900)</td><td>potencias de 2 y <code>%</code>, con caso borde</td></tr><tr><td>4</td><td><a href="https://codeforces.com/problemset/problem/102/B" class="external external-link" target="_blank">Sum of Digits (102B)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★★ (1000)</td><td>desarmar dígitos, número gigante como string</td></tr><tr><td>5</td><td>⭐ <a href="https://codeforces.com/problemset/problem/230/B" class="external external-link" target="_blank">T-primes (230B)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★★★ (1300)</td><td>criba + una observación bonita</td></tr></tbody></table></div>
+<h2 id="un-ejemplo-para-pensar">Un ejemplo para pensar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#un-ejemplo-para-pensar" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>En un reloj con posiciones de 0 a 9 estamos en el 2 y retrocedemos cinco
+pasos. La posición matemática es 7, pero en C++ <code>(2 - 5) % 10</code> vale −3.
+¿Cómo pueden describir el mismo desplazamiento?</p>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Un resto negativo y su representante en el reloj </p></div>
+                  <div class="fold-callout-icon callout-fold"></div>
+                </div>
+<div class="callout-content">
+<p>−3 y 7 difieren en una vuelta completa de 10, así que representan
+la misma posición módulo 10. La división entera de C++ trunca hacia
+cero y su resto puede ser negativo. Para obtener una posición entre
+0 y 9, <code>((-3 % 10) + 10) % 10</code> da 7. El último <code>% 10</code> también
+funciona cuando el resto original era cero: evita devolver 10.</p>
+</div>
+</blockquote>
+<hr/>
+<p>← <a href="../ruta/09---recursión" class="internal internal-link alias" data-slug="ruta/09---recursión">09 - Recursión</a> · <a href="../ruta/ruta-de-aprendizaje" class="internal internal-link alias" data-slug="ruta/ruta-de-aprendizaje">Ruta de Aprendizaje</a> · <a href="../ruta/11---colas-de-prioridad" class="internal internal-link alias" data-slug="ruta/11---colas-de-prioridad">11 - Colas de prioridad</a> →</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Vista Gráfica</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:1,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:3,&quot;showTags&quot;:false,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:1.3,&quot;centerForce&quot;:0.05,&quot;linkDistance&quot;:50,&quot;fontSize&quot;:0.65,&quot;opacityScale&quot;:1.5,&quot;showTags&quot;:false,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-291" aria-expanded="true"><h3>Tabla de Contenidos</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#10--algoritmos-numéricos-y-aritmética-modular" data-for="10--algoritmos-numéricos-y-aritmética-modular">10 · Algoritmos numéricos y aritmética modular</a></li><li class="depth-1"><a href="#-objetivos" data-for="-objetivos">🎯 Objetivos</a></li><li class="depth-1"><a href="#-la-lección" data-for="-la-lección">📖 La lección</a></li><li class="depth-2"><a href="#el-operador--a-fondo" data-for="el-operador--a-fondo">El operador % a fondo</a></li><li class="depth-2"><a href="#primalidad-en-on" data-for="primalidad-en-on">Primalidad en O(√n)</a></li><li class="depth-2"><a href="#mcd-y-mcm" data-for="mcd-y-mcm">MCD y MCM</a></li><li class="depth-2"><a href="#aritmética-modular" data-for="aritmética-modular">Aritmética modular</a></li><li class="depth-1"><a href="#️-práctica" data-for="️-práctica">🏋️ Práctica</a></li><li class="depth-2"><a href="#práctica-directa-tres-herramientas-numéricas" data-for="práctica-directa-tres-herramientas-numéricas">Práctica directa: Tres herramientas numéricas</a></li><li class="depth-2"><a href="#aplicar-en-problemas" data-for="aplicar-en-problemas">Aplicar en problemas</a></li><li class="depth-2"><a href="#más-aplicaciones-en-inglés" data-for="más-aplicaciones-en-inglés">Más aplicaciones (en inglés)</a></li><li class="depth-1"><a href="#un-ejemplo-para-pensar" data-for="un-ejemplo-para-pensar">Un ejemplo para pensar</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Retroenlaces</h3><ul id="list-0" class="overflow"><li><a href="../oci/2015/gollum-vs-golomb-(oci-2015-nacional)" class="internal">Gollum vs Golomb (OCI 2015 Nacional)</a></li><li><a href="../oci/2019/el-candado-del-basurero-(oci-2019-nacional)" class="internal">El candado del basurero (OCI 2019 Nacional)</a></li><li><a href="../oci/2020/catalonia-(oci-2020-nacional)" class="internal">Catalonia (OCI 2020 Nacional)</a></li><li><a href="../oci/2022/daniela-y-los-múltiplos-(oci-2022-regional)" class="internal">Daniela y los múltiplos (OCI 2022 Regional)</a></li><li><a href="../oci/2023/balancín-(oci-2023-nacional)" class="internal">Balancín (OCI 2023 Nacional)</a></li><li><a href="../referencia/algoritmos/criba-de-eratóstenes" class="internal">Criba de Eratóstenes</a></li><li><a href="../referencia/algoritmos/euclides-extendido-(gcd)" class="internal">Euclides extendido (gcd)</a></li><li><a href="../referencia/algoritmos/exponenciación-rápida-(modular)" class="internal">Exponenciación rápida (modular)</a></li><li><a href="../referencia/algoritmos/factorización" class="internal">Factorización</a></li><li><a href="../referencia/temas/matemática-y-combinatoria" class="internal">Matemática y Combinatoria</a></li><li><a href="../ruta/09---recursión" class="internal">09 - Recursión</a></li><li><a href="../ruta/11---colas-de-prioridad" class="internal">11 - Colas de prioridad</a></li><li><a href="../ruta/diagnóstico-y-dominio" class="internal">Por dónde empezar</a></li><li><a href="../ruta/ruta-de-aprendizaje" class="internal">Ruta de Aprendizaje</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Creado con <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://ioinformatics.org/">IOI oficial</a></li><li><a href="https://oj.uz/problems/source/IOI">Juez oj.uz</a></li><li><a href="https://quartz.jzhao.xyz/">Hecho con Quartz</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5e811136.js" type="application/javascript" data-persist="true"></script><script src="../postscript-c7ad6985.js" type="module" data-persist="true"></script></html>
