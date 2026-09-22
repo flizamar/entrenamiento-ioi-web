@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr"><head><title>07 - Cuánto se demora tu programa</title><meta charset="utf-8"/><link rel="preload" href="../index-b67c600c.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Entrenamiento OCI · IOI"/><meta property="og:title" content="07 - Cuánto se demora tu programa"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="07 - Cuánto se demora tu programa"/><meta name="twitter:description" content="07 · ¿Cuánto se demora tu programa? Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta property="og:description" content="07 · ¿Cuánto se demora tu programa? Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta property="og:image:alt" content="07 · ¿Cuánto se demora tu programa? Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta property="twitter:domain" content="flizamar.github.io/entrenamiento-ioi-web"/><meta property="og:url" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/07---cuánto-se-demora-tu-programa"/><meta property="twitter:url" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/07---cuánto-se-demora-tu-programa"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="07 · ¿Cuánto se demora tu programa? Buscar soluciones eficientes · Ruta de Aprendizaje Antes de empezar."/><meta name="generator" content="Quartz"/><link href="../index-b67c600c.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/07---cuánto-se-demora-tu-programa-og-image.webp"/><meta property="og:image:url" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/07---cuánto-se-demora-tu-programa-og-image.webp"/><meta name="twitter:image" content="https://flizamar.github.io/entrenamiento-ioi-web/ruta/07---cuánto-se-demora-tu-programa-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="ruta/07---cuánto-se-demora-tu-programa" data-basepath="/entrenamiento-ioi-web"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Entrenamiento OCI · IOI</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Buscar" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Buscar</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Buscar algo..." placeholder="Buscar algo..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Modo oscuro"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Modo oscuro"><title>Modo oscuro</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Modo claro"><title>Modo claro</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Modo lector"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Modo lector"><title>Modo lector</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a, b) => { const orden = [\&quot;ruta\&quot;, \&quot;referencia\&quot;, \&quot;ioi\&quot;, \&quot;oci\&quot;]; const ra = orden.indexOf(a.slugSegment), rb = orden.indexOf(b.slugSegment); if (ra !== -1 &amp;&amp; rb !== -1) return ra - rb; if (ra !== -1) return -1; if (rb !== -1) return 1; if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1; return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: \&quot;base\&quot; }); }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-291" aria-label="Explorador"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorador</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-291" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../ruta/">Ruta de Aprendizaje</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>07 - Cuánto se demora tu programa</a></div></nav></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="07--cuánto-se-demora-tu-programa">07 · ¿Cuánto se demora tu programa?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#07--cuánto-se-demora-tu-programa" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Buscar soluciones eficientes</strong> · <a href="../ruta/ruta-de-aprendizaje" class="internal internal-link alias" data-slug="ruta/ruta-de-aprendizaje">Ruta de Aprendizaje</a></p>
+<p><strong>Antes de empezar.</strong> Ciclos y recorridos de arreglos: <a href="../ruta/03---arreglos-y-búsqueda-lineal" class="internal internal-link alias" data-slug="ruta/03---arreglos-y-búsqueda-lineal">03 - Arreglos y búsqueda lineal</a>. Basta reconocer qué hacen <code>for</code>, <code>while</code>, <code>if</code> y un acceso como <code>a[i]</code>; el conteo de trabajo y la notación se desarrollan aquí desde ejemplos.</p>
+<h2 id="-objetivos">🎯 Objetivos<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-objetivos" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Al terminar este módulo sabes:</p>
+<ul>
+<li>Estimar cuántas operaciones hace tu código (notación O grande, sin sustos).</li>
+<li>Estimar con las restricciones si un enfoque es viable antes de programarlo.</li>
+<li>Reconocer cuándo un ciclo se reemplaza por una fórmula.</li>
+</ul>
+<h2 id="-la-lección">📖 La lección<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-la-lección" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="primero-qué-queremos-estimar">Primero: ¿qué queremos estimar?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#primero-qué-queremos-estimar" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>En una competencia, cada participante obtiene un puntaje. Queremos calcular
+la suma de todos los puntajes. Si son cuatro —2, 5, 1 y 4—, podemos sumarlos
+a mano: el total es <strong>12</strong>.</p>
+<p>Ahora imagina que participan <strong>200 000 personas</strong>. Un programa puede hacer
+la misma suma, leyendo un puntaje y agregándolo al total cada vez.
+¿Cuántas sumas tendrá que hacer? ¿Podrá terminar dentro de los <strong>2 segundos</strong>
+que permite el problema?</p>
+<p>Para responder, empezaremos siguiendo el caso de cuatro participantes.
+Después veremos cómo cambia la cantidad de trabajo cuando participan más.</p>
+<p>En este ejemplo hay tres cantidades distintas:</p>
+<ol>
+<li><strong>Tamaño de la entrada:</strong> la cantidad de puntajes que recibimos, uno por participante.</li>
+<li><strong>Trabajo del algoritmo:</strong> cuántas lecturas y sumas hacemos para obtener el total.</li>
+<li><strong>Tiempo real:</strong> los segundos que tarda el computador en hacer ese trabajo.</li>
+</ol>
+<p>Podemos contar el trabajo leyendo el código. Convertirlo a segundos exige
+suposiciones sobre la máquina y después mediciones. Empezaremos por la parte
+que podemos justificar sin ejecutar: <strong>cuántas veces ocurre cada trabajo</strong>.</p>
+<p>Llamaremos <code>n</code> a la cantidad de participantes: en el ejemplo pequeño, n=4.
+El valor de un puntaje no cambia esa cantidad: aunque una persona obtenga
+un millón de puntos, seguimos leyendo un solo puntaje por persona.</p>
+<h3 id="contar-operaciones">Contar operaciones<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#contar-operaciones" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Guardamos los cuatro puntajes en <code>a = {2, 5, 1, 4}</code>. Para sumar los de
+cualquier competencia necesitamos leerlos todos: empezamos con suma cero y agregamos cada elemento.</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// supone: vector&lt;int> a;  // para la traza: {2, 5, 1, 4}</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> suma </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)a.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">size</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(); i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    suma </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> a[i];</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> suma </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"> // 12 para la traza</span></span></code></pre></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Vuelta</th><th>Índice <code>i</code></th><th>Valor leído</th><th>Suma después</th></tr></thead><tbody><tr><td>1</td><td>0</td><td>2</td><td>2</td></tr><tr><td>2</td><td>1</td><td>5</td><td>7</td></tr><tr><td>3</td><td>2</td><td>1</td><td>8</td></tr><tr><td>4</td><td>3</td><td>4</td><td>12</td></tr></tbody></table></div>
+<p>Con cuatro elementos se ejecuta cuatro veces <code>suma += a[i]</code>; con n elementos,
+<strong>n veces</strong>. Supondremos que cada acceso al vector y suma de enteros de tamaño
+fijo cuesta una cantidad constante de trabajo y que la suma cabe en <code>long long</code>.</p>
+<p>También se inicializa <code>i</code>, se compara con el límite y se incrementa. No estamos
+contando instrucciones exactas del procesador: elegimos una operación
+representativa. Esos trabajos adicionales cambian el costo de cada vuelta,
+pero <strong>duplicar n sigue duplicando aproximadamente el trabajo del recorrido</strong>.
+Con un vector vacío, el cuerpo se ejecuta cero veces, aunque iniciar y terminar
+el programa todavía tiene un costo.</p>
+<h3 id="ciclos-consecutivos-sumar-los-trabajos">Ciclos consecutivos: sumar los trabajos<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ciclos-consecutivos-sumar-los-trabajos" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Si primero recorremos n datos y <strong>después</strong> recorremos m datos, los trabajos
+se suman. Este contador hace visible cuántas vueltas se ejecutan:</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// supone: int n, m;  // cantidades no negativas</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> revisiones </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) revisiones</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> m; j</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) revisiones</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> revisiones </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"> // n + m</span></span></code></pre></figure>
+<p>Con n=4 y m=3, hay 4 + 3 = <strong>7 revisiones</strong>. El segundo ciclo comienza
+cuando el primero ya terminó. Si ambos recorren el mismo vector de tamaño n,
+son n+n = <strong>2n</strong>, no n². Leer el vector y después buscar en él es un ejemplo
+de trabajos consecutivos.</p>
+<h3 id="ciclos-anidados-contar-lo-que-se-repite-por-cada-vuelta">Ciclos anidados: contar lo que se repite por cada vuelta<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ciclos-anidados-contar-lo-que-se-repite-por-cada-vuelta" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Ahora cada vuelta exterior ejecuta <strong>todo</strong> el ciclo interior:</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// supone: int n, m;  // cantidades no negativas</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> revisiones </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> m; j</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        revisiones</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> revisiones </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"> // 1LL * n * m</span></span></code></pre></figure>
+<p>Con n=4 y m=3, para cada uno de los cuatro valores de i se prueban tres
+valores de j: 3+3+3+3 = <strong>12 revisiones</strong>. Son n·m en total. Recorrer una
+matriz de n filas y m columnas tiene esta forma.</p>
+<p>Si ambos límites son n, hay n·n = n² vueltas. En el dibujo fijamos n=4:
+una fila representa un recorrido; el cuadrado representa combinar cada índice
+con cada uno de los cuatro índices del otro ciclo.</p>
+
+<div class="dg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable: Con n igual a cuatro, un recorrido hace cuatro revisiones; dos ciclos de cuatro vueltas anidados hacen dieciséis, una por cada casilla del cuadrado." style="max-width:100%;overflow-x:auto;"><svg viewBox="0 0 350 290" width="100%" style="max-width:390px;min-width:350px;height:auto;" role="img" aria-label="Con n igual a cuatro, un recorrido hace cuatro revisiones; dos ciclos de cuatro vueltas anidados hacen dieciséis, una por cada casilla del cuadrado." xmlns="http://www.w3.org/2000/svg"><style>.dg-t{font:600 13px system-ui,sans-serif;fill:currentColor}.dg-s{font:400 11px system-ui,sans-serif;fill:currentColor;opacity:.72}.dg-m{font:500 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:currentColor}.dg-l{stroke:currentColor;fill:none}.dg-p{stroke:currentColor}</style><text x="175" y="23" text-anchor="middle" class="dg-t">Un recorrido: 4 revisiones</text><rect x="28" y="42" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="54" y="42" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="80" y="42" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="106" y="42" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><text x="238" y="60" text-anchor="middle" class="dg-t">n = 4</text><text x="175" y="113" text-anchor="middle" class="dg-t">Dos ciclos de 4 vueltas anidados</text><rect x="28" y="134" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="54" y="134" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="80" y="134" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="106" y="134" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="28" y="160" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="54" y="160" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="80" y="160" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="106" y="160" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="28" y="186" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="54" y="186" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="80" y="186" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="106" y="186" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="28" y="212" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="54" y="212" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="80" y="212" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="106" y="212" width="26" height="26" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><text x="238" y="174" text-anchor="middle" class="dg-t">4 × 4 = 16</text><text x="238" y="195" text-anchor="middle" class="dg-s">n × n revisiones</text><text x="175" y="266" text-anchor="middle" class="dg-s">Cada casilla representa una vuelta del cuerpo.</text><text x="175" y="284" text-anchor="middle" class="dg-s">No representa cuántos valores guardamos.</text></svg></div><p class="dg-ayuda">Si el diagrama no cabe, deslízalo horizontalmente.</p>
+
+<p>No multiplicamos porque haya dos palabras <code>for</code>: multiplicamos porque el
+ciclo interior realiza m vueltas <strong>por cada una</strong> de las n vueltas exteriores.
+Si su límite cambia, hay que contar de otra manera.</p>
+<h3 id="cuando-el-ciclo-interior-no-siempre-hace-lo-mismo">Cuando el ciclo interior no siempre hace lo mismo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cuando-el-ciclo-interior-no-siempre-hace-lo-mismo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Para comparar cada pareja de posiciones distintas <strong>una sola vez</strong>, podemos
+exigir que j esté después de i:</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// supone: int n;  // cantidad no negativa</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">long</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> parejas </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; j</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        parejas</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> parejas </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span></code></pre></figure>
+<p>Para n=4:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th><code>i</code></th><th>Valores de <code>j</code></th><th>Parejas nuevas</th></tr></thead><tbody><tr><td>0</td><td>1, 2, 3</td><td>3</td></tr><tr><td>1</td><td>2, 3</td><td>2</td></tr><tr><td>2</td><td>3</td><td>1</td></tr><tr><td>3</td><td>ninguno</td><td>0</td></tr></tbody></table></div>
+<p>El total es 3+2+1+0 = <strong>6</strong>, no 16. Para n posiciones es
+<code>(n−1)+(n−2)+…+1 = n(n−1)/2</code>. Podemos justificar la división por dos:
+hay n(n−1) elecciones ordenadas de dos posiciones distintas, pero cada pareja
+aparece dos veces, como (i,j) y como (j,i).</p>
+<p>En cambio, si por cada i el ciclo interior hace <strong>como máximo tres revisiones</strong>,
+el total no supera 3n. Aunque haya dos ciclos anidados, ese trabajo crece
+proporcionalmente a n. Al final de la página hay código para contrastar ambos casos.</p>
+<h3 id="resumir-el-crecimiento-la-notación-o-grande">Resumir el crecimiento: la notación O grande<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resumir-el-crecimiento-la-notación-o-grande" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Las cuentas anteriores nos permiten comparar qué ocurre cuando crece la entrada.
+La notación <strong>O grande</strong> expresa una cota de ese crecimiento. En esta guía
+buscaremos una cota que describa bien el trabajo, omitiendo factores constantes
+y términos que crecen más lentamente.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Trabajo contado</th><th>Cómo lo resumimos</th><th>Qué significa</th></tr></thead><tbody><tr><td>Una cantidad fija de operaciones</td><td>O(1)</td><td>no aumenta con n</td></tr><tr><td>n, 2n o 3n revisiones</td><td>O(n)</td><td>crecimiento lineal</td></tr><tr><td>n² o n(n−1)/2 revisiones</td><td>O(n²)</td><td>crecimiento cuadrático</td></tr><tr><td>n+m revisiones</td><td>O(n+m)</td><td>cuenta ambos tamaños</td></tr><tr><td>n·m revisiones</td><td>O(n·m)</td><td>combina ambos tamaños</td></tr></tbody></table></div>
+<p>En la cota O(n·m) para recorrer una matriz suponemos dimensiones positivas.
+Si m=0, no se ejecuta el cuerpo interior, pero el ciclo exterior todavía
+recorre sus n vueltas: también hay que contar ese trabajo.</p>
+<p><strong>O(1) no significa una sola operación</strong>: diez sumas fijas también tienen
+costo constante respecto de n. <strong>O(n) no significa n segundos</strong>, ni que dos
+programas O(n) tarden exactamente lo mismo.</p>
+<p>Si un programa hace <code>n² + 3n + 5</code> unidades de trabajo, para n=1000 los términos
+son 1000000, 3000 y 5. El término cuadrático domina al crecer n: resumimos el
+total como O(n²). Eso permite comparar enfoques sin fingir que conocemos
+cada instrucción de la máquina. Al medir tiempos reales, los factores
+constantes vuelven a importar.</p>
+<h3 id="mejor-caso-peor-caso-y-decisiones-del-programa">Mejor caso, peor caso y decisiones del programa<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mejor-caso-peor-caso-y-decisiones-del-programa" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Buscar linealmente un valor ilustra por qué el tamaño no basta para predecir
+una ejecución exacta. En un vector de n elementos:</p>
+<ul>
+<li>Si está primero, basta <strong>una comparación</strong>.</li>
+<li>Si está al final o no aparece, hacen falta <strong>n comparaciones</strong>.</li>
+</ul>
+<p>El mejor caso es O(1) y el peor, O(n). Para decidir si una solución soporta
+los límites, normalmente analizamos el <strong>peor caso permitido</strong>, no solo la
+entrada de ejemplo. Decir «en promedio se encuentra rápido» necesita justificar
+qué distribución de entradas estamos suponiendo; el juez no promete esa distribución.</p>
+<p>En un <code>if/else</code> se ejecuta una sola rama. Para una cota del peor caso contamos
+la condición y la más costosa de las ramas que pueda ejecutarse. Si una recorre
+n datos y la otra hace tres operaciones, la cota es O(n). Si la condición también
+hace una búsqueda, su costo se incluye: no todas las condiciones son O(1).</p>
+<h3 id="qué-significa-ese-logaritmo">Qué significa ese logaritmo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#qué-significa-ese-logaritmo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Ya contamos ciclos que avanzan de uno en uno. Ahora pensemos en un proceso
+que <strong>divide el trabajo pendiente por dos</strong> en cada vuelta:</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// supone: int n;  // n >= 1</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pendientes </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n, pasos </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">while</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (pendientes </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    pendientes </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">/=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"> // división entera</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    pasos</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pasos </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span></code></pre></figure>
+<p>Con n=16, los tamaños pendientes son 16→8→4→2→1. El cuerpo se ejecuta
+<strong>cuatro veces</strong>, aunque empezó con 16 elementos. El dibujo representa tamaños,
+no un arreglo que el programa esté copiando:</p>
+
+<div class="dg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable: Tamaños pendientes al dividir por dos: 16,8,4,2,1. Hay cuatro divisiones, cada una con trabajo constante en el código." style="max-width:100%;overflow-x:auto;"><svg viewBox="0 0 350 269" width="100%" style="max-width:390px;min-width:350px;height:auto;" role="img" aria-label="Tamaños pendientes al dividir por dos: 16,8,4,2,1. Hay cuatro divisiones, cada una con trabajo constante en el código." xmlns="http://www.w3.org/2000/svg"><style>.dg-t{font:600 13px system-ui,sans-serif;fill:currentColor}.dg-s{font:400 11px system-ui,sans-serif;fill:currentColor;opacity:.72}.dg-m{font:500 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:currentColor}.dg-l{stroke:currentColor;fill:none}.dg-p{stroke:currentColor}</style><defs><marker id="a-07-mitades" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="currentColor"></path></marker></defs><text x="175" y="23" text-anchor="middle" class="dg-t">De 16 a 1 en cuatro divisiones</text><text x="28" y="63" text-anchor="middle" class="dg-t">16</text><rect x="52" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="68" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="84" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="100" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="116" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="132" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="148" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="164" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="180" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="196" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="212" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="228" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="244" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="260" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="276" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="292" y="48" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><line x1="324" y1="55" x2="324" y2="78" class="dg-l" stroke-width="1.5" marker-end="url(#a-07-mitades)"></line><text x="28" y="98" text-anchor="middle" class="dg-t">8</text><rect x="52" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="68" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="84" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="100" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="116" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="132" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="148" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="164" y="83" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><line x1="324" y1="90" x2="324" y2="113" class="dg-l" stroke-width="1.5" marker-end="url(#a-07-mitades)"></line><text x="28" y="133" text-anchor="middle" class="dg-t">4</text><rect x="52" y="118" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="68" y="118" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="84" y="118" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="100" y="118" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><line x1="324" y1="125" x2="324" y2="148" class="dg-l" stroke-width="1.5" marker-end="url(#a-07-mitades)"></line><text x="28" y="168" text-anchor="middle" class="dg-t">2</text><rect x="52" y="153" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><rect x="68" y="153" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><line x1="324" y1="160" x2="324" y2="183" class="dg-l" stroke-width="1.5" marker-end="url(#a-07-mitades)"></line><text x="28" y="203" text-anchor="middle" class="dg-t">1</text><rect x="52" y="188" width="16" height="21" class="dg-p" stroke-width="1.2" fill="currentColor" fill-opacity="0.12"></rect><text x="175" y="229" text-anchor="middle" class="dg-s">Cada fila muestra el tamaño pendiente.</text><text x="175" y="248" text-anchor="middle" class="dg-s">El programa solo divide un entero por vuelta;</text><text x="175" y="265" text-anchor="middle" class="dg-s">no recorre ni copia esas casillas.</text></svg></div><p class="dg-ayuda">Si el diagrama no cabe, deslízalo horizontalmente.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>n inicial</th><th>8</th><th>16</th><th>32</th><th>1024</th></tr></thead><tbody><tr><td>Divisiones hasta 1</td><td>3</td><td>4</td><td>5</td><td>10</td></tr></tbody></table></div>
+<p>Duplicar n añade una sola vuelta. A esa relación le damos un nombre:
+<strong>log₂(n)</strong> es el exponente al que hay que elevar 2 para obtener n.
+Como 2⁴=16, log₂(16)=4. Para potencias de dos coincide exactamente con la
+cantidad de divisiones del ejemplo.</p>
+<p>Si n no es una potencia de dos, importa cómo redondea el código: con 15,
+la división entera recorre 15→7→3→1 y hace 3 vueltas. Una versión que redondee
+hacia arriba puede hacer una más. Ambas tienen crecimiento <strong>O(log n)</strong>.
+Con un millón, este código hace 19 vueltas; como 2²⁰=1048576, «unas 20»
+es una buena estimación de escala.</p>
+<p>Dividir por dos solo da ese costo cuando <strong>cada vuelta hace trabajo constante</strong>.
+Si primero recorres todos los pendientes y luego los divides, el trabajo es
+n+n/2+n/4+…: para n potencia de dos, hasta procesar también el último elemento,
+suma 2n−1, y el total es O(n).</p>
+<p>La <a href="../ruta/08---búsqueda-binaria" class="internal internal-link alias" data-slug="ruta/08---búsqueda-binaria">búsqueda binaria</a> aprovechará este crecimiento:
+en un arreglo ordenado, una comparación permite descartar aproximadamente
+la mitad de los candidatos. Aquí estamos contando su trabajo; el siguiente
+módulo desarrolla cómo hacer ese descarte correctamente.</p>
+<h3 id="también-importa-el-trabajo-dentro-del-ciclo">También importa el trabajo dentro del ciclo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#también-importa-el-trabajo-dentro-del-ciclo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Un ciclo de n vueltas cuesta «n por el costo de cada vuelta» <strong>si ese costo
+es el mismo o está acotado del mismo modo en todas ellas</strong>. Una línea de C++
+puede ocultar mucho trabajo:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Trabajo realizado</th><th>Costo que debemos contar</th></tr></thead><tbody><tr><td>Leer <code>a[i]</code>, comparar o sumar enteros de tamaño fijo</td><td>O(1)</td></tr><tr><td>Buscar linealmente en n elementos</td><td>O(n) en el peor caso</td></tr><tr><td>Copiar un vector de n enteros</td><td>O(n)</td></tr><tr><td>Ordenar n enteros con <code>sort</code></td><td>O(n log n)</td></tr><tr><td>Buscar o insertar una clave entera en un <code>set</code> con hasta n elementos</td><td>O(log(n+1))</td></tr></tbody></table></div>
+<p>Por ejemplo, si haces una copia completa de un vector de n elementos en
+cada una de n vueltas, realizas n·n = <strong>O(n²)</strong> trabajo, aunque visualmente
+solo haya un ciclo. Si en cada vuelta haces una búsqueda de costo O(log n),
+obtienes <strong>O(n log n)</strong>. Ese producto combina n repeticiones con trabajo
+logarítmico en cada una.</p>
+<p>El costo de <code>sort</code> es el contrato de la herramienta para ordenar: no necesitas
+conocer su implementación para incluirlo en la cuenta. Con n=200000,
+log₂(n)≈18 y n·log₂(n)≈3600000 da una escala útil, <strong>no un número exacto de
+comparaciones</strong>. En fórmulas de complejidad se suele escribir log sin base:
+cambiar una base fija mayor que uno solo multiplica por una constante.</p>
+<p>Los tipos también importan: comparar dos enteros tiene costo constante en
+este modelo; comparar strings puede recorrer varios caracteres. Las cuentas
+de la tabla suponen valores y comparaciones de costo constante.</p>
+<h3 id="varias-consultas-y-varios-casos-de-prueba">Varias consultas y varios casos de prueba<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#varias-consultas-y-varios-casos-de-prueba" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Queremos responder q preguntas de pertenencia sobre n datos que no cambian.
+Una búsqueda lineal por pregunta cuesta O(nq). Otra opción es ordenar <strong>una vez</strong>
+y hacer q búsquedas binarias: O(n log n + q log n). La preparación y las
+consultas son trabajos consecutivos; por eso sumamos sus costos.</p>
+<p>Con n=q=200000, el primer plan puede hacer <strong>40000000000 comparaciones</strong>.
+El segundo tiene una escala de unos 3600000 para ordenar y otros 3600000
+para las consultas. Si q=1, en cambio, recorrer una vez O(n) evita pagar
+la ordenación. No siempre compensa preparar una estructura más elaborada.</p>
+<p>Si hay varios casos de prueba, sumamos el trabajo de <strong>todos</strong>. Con tamaños
+n₁, n₂, … y un algoritmo cuadrático por caso, el total depende de
+n₁²+n₂²+…, no solo del caso más grande. Por ejemplo, dos casos de tamaño 1000
+hacen 2000000 revisiones cuadráticas en total.</p>
+<p>Lee también los límites sobre la <strong>suma de tamaños</strong>. Un algoritmo lineal
+procesa como máximo N elementos si el enunciado garantiza que la suma de n
+no supera N. Para uno cuadrático, repartir los mismos datos cambia el costo:
+un caso de tamaño 2000 hace 4000000 revisiones; dos de tamaño 1000 hacen 2000000.</p>
+<h3 id="del-conteo-al-límite-de-tiempo">Del conteo al límite de tiempo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#del-conteo-al-límite-de-tiempo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Volvamos a los 200 000 participantes y al límite de 2 segundos. Sumar sus
+puntajes requiere un recorrido. Si la pregunta fuera ordenarlos o comparar
+cada participante con todos los demás, el trabajo sería distinto:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Plan</th><th>Escala de trabajo con ese n</th></tr></thead><tbody><tr><td>Un recorrido</td><td>200000</td></tr><tr><td>Ordenar</td><td>unos 3600000, usando n·log₂(n)</td></tr><tr><td>Comparar todas las parejas con ambos índices independientes</td><td>40000000000</td></tr></tbody></table></div>
+<p>La diferencia entre doscientas mil y cuarenta mil millones ya es suficiente
+para descartar muchas ideas. No necesitas adivinar décimas de segundo para
+notar que el tercer plan hace muchísimo más trabajo.</p>
+<p>Como <strong>modelo ilustrativo</strong>, supongamos una tasa de 10⁸ operaciones simples
+por segundo. Dividir el trabajo por esa tasa daría 400 segundos para 4·10¹⁰
+operaciones. Bajo esa estimación, ese plan queda muy lejos de un límite de
+2 segundos. <strong>La tasa no es una garantía</strong>: depende del procesador, compilador,
+memoria, entrada/salida y de qué llames «operación». No es igual sumar un entero
+que insertar en un mapa o comparar strings largos.</p>
+<p>Para un enfoque cercano al límite, usa una medición con datos grandes y
+construidos para provocar su peor caso. Compila en condiciones similares a las
+del juez, evita salida de depuración y repite la medición. Probar n y 2n ayuda
+a contrastar el modelo: un trabajo lineal tiende a duplicarse; uno cuadrático,
+a cuadruplicarse cuando domina el trabajo principal. Tu computador no es el
+juez, así que deja margen. Un contador didáctico que siempre termina valiendo
+n² puede ser simplificado por el compilador: no sirve por sí solo como benchmark
+del algoritmo real.</p>
+<p>En una terminal de Linux, macOS o WSL, una medición puede hacerse así:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">g++</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -O2</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -std=c++17</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> sol.cpp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> sol</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">/usr/bin/time</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ./sol</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> grande.txt</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> salida.txt</span></span></code></pre></figure>
+<p><code>sol.cpp</code> es tu solución y <code>grande.txt</code> debe contener una entrada válida que
+hayas preparado. <code>salida.txt</code> recibe la respuesta del programa; <code>time</code> informa
+los tiempos por separado. <strong><code>real</code> son segundos transcurridos</strong>; <code>user</code> y <code>sys</code>
+son tiempos de CPU. Ajusta las opciones de compilación a las del juez y
+comprueba también que la respuesta guardada sea correcta.</p>
+<p>Tiempo y memoria se revisan por separado. Un recorrido puede necesitar solo
+un acumulador adicional; guardar una tabla n×n requiere n² casillas aunque
+cada consulta posterior sea rápida. Cuenta todos los arreglos que estarán
+vivos a la vez. Las estimaciones en bytes están en
+<a href="../ruta/03---arreglos-y-búsqueda-lineal#cuántos-elementos-caben" class="internal internal-link alias" data-slug="ruta/03---arreglos-y-búsqueda-lineal">memoria de vectores</a>
+y <a href="../ruta/04---matrices#antes-de-crearla-contar-casillas" class="internal internal-link alias" data-slug="ruta/04---matrices">memoria de matrices</a>.</p>
+<h3 id="de-ciclo-a-fórmula">De ciclo a fórmula<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#de-ciclo-a-fórmula" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A veces no hace falta recorrer. Queremos saber cuántos incrementos de uno
+faltan para que <code>a</code> sea divisible por <code>b</code>, con <code>0≤a≤10⁹</code> y <code>1≤b≤10⁹</code>.
+El operador <code>%</code> devuelve el resto de la división: <code>7 % 5 = 2</code>.</p>
+<p>Podemos incrementar hasta encontrar un múltiplo. Con a=7 y b=5, probamos
+8, 9 y 10: tres incrementos. Pero con a=1 y b=10⁹ serían <strong>999999999</strong>.
+El costo de esa simulación depende de b, no de la cantidad de números de entrada:
+puede hacer hasta b−1 incrementos.</p>
+<p>El resto dice cuánto avanzamos desde el múltiplo anterior. Si no es cero,
+faltan <code>b - resto</code> pasos para el siguiente. Si es cero, ya terminamos y faltan cero:</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// supone: long long a, b;  // 0 &lt;= a &lt;= 1000000000; 1 &lt;= b &lt;= 1000000000</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> b) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span></code></pre></figure>
+
+<div class="dg-scroll" tabindex="0" role="region" aria-label="Diagrama desplazable: En la recta numérica, desde a hasta el siguiente múltiplo de b faltan b menos a módulo b pasos" style="max-width:100%;overflow-x:auto;"><svg viewBox="0 0 460 104" width="100%" style="max-width:500px;min-width:460px;height:auto;" role="img" aria-label="En la recta numérica, desde a hasta el siguiente múltiplo de b faltan b menos a módulo b pasos" xmlns="http://www.w3.org/2000/svg"><style>.dg-t{font:600 13px system-ui,sans-serif;fill:currentColor}.dg-s{font:400 11px system-ui,sans-serif;fill:currentColor;opacity:.72}.dg-m{font:500 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:currentColor}.dg-l{stroke:currentColor;fill:none}.dg-p{stroke:currentColor}</style><defs><marker id="a-07-formula" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="currentColor"></path></marker></defs><line x1="30" y1="49" x2="30" y2="63" class="dg-l" stroke-width="1.4"></line><text x="30" y="78" text-anchor="middle" class="dg-s">0</text><line x1="56" y1="52" x2="56" y2="60" class="dg-l" stroke-width="1"></line><line x1="82" y1="52" x2="82" y2="60" class="dg-l" stroke-width="1"></line><line x1="108" y1="52" x2="108" y2="60" class="dg-l" stroke-width="1"></line><line x1="134" y1="52" x2="134" y2="60" class="dg-l" stroke-width="1"></line><line x1="160" y1="49" x2="160" y2="63" class="dg-l" stroke-width="1.4"></line><text x="160" y="78" text-anchor="middle" class="dg-s">5</text><line x1="186" y1="52" x2="186" y2="60" class="dg-l" stroke-width="1"></line><line x1="212" y1="52" x2="212" y2="60" class="dg-l" stroke-width="1"></line><line x1="238" y1="52" x2="238" y2="60" class="dg-l" stroke-width="1"></line><line x1="264" y1="52" x2="264" y2="60" class="dg-l" stroke-width="1"></line><line x1="290" y1="49" x2="290" y2="63" class="dg-l" stroke-width="1.4"></line><text x="290" y="78" text-anchor="middle" class="dg-s">10</text><line x1="316" y1="52" x2="316" y2="60" class="dg-l" stroke-width="1"></line><line x1="342" y1="52" x2="342" y2="60" class="dg-l" stroke-width="1"></line><line x1="368" y1="52" x2="368" y2="60" class="dg-l" stroke-width="1"></line><line x1="394" y1="52" x2="394" y2="60" class="dg-l" stroke-width="1"></line><line x1="420" y1="49" x2="420" y2="63" class="dg-l" stroke-width="1.4"></line><text x="420" y="78" text-anchor="middle" class="dg-s">15</text><line x1="30" y1="56" x2="420" y2="56" class="dg-l" stroke-width="1.4"></line><circle cx="212" cy="56" r="4.5" fill="currentColor" fill-opacity="0.9"></circle><text x="212" y="42" text-anchor="middle" class="dg-t">a = 7</text><path d="M 212 52 L 290 52" class="dg-l" stroke-width="2" marker-end="url(#a-07-formula)"></path><text x="290" y="42" text-anchor="middle" class="dg-t">10</text><text x="251" y="28" text-anchor="middle" class="dg-s">faltan 3 = (5 − 7 % 5) % 5</text><text x="160" y="94" text-anchor="middle" class="dg-s">múltiplos de b = 5 marcados grueso</text></svg></div><p class="dg-ayuda">Si el diagrama no cabe, deslízalo horizontalmente.</p>
+
+<p>El <code>% b</code> final convierte b en 0 cuando a ya era múltiplo; en los otros casos
+no cambia la respuesta, que está entre 1 y b−1. Hacemos un número fijo de
+operaciones con enteros de tamaño fijo: <strong>O(1)</strong> tiempo y memoria adicional.
+La mejora viene de responder la misma pregunta sin simular cada incremento.</p>
+<h3 id="cómo-analizar-tu-propio-programa">Cómo analizar tu propio programa<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cómo-analizar-tu-propio-programa" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Identifica qué puede crecer: n datos, n×m casillas, q consultas, valores numéricos.</li>
+<li>Cuenta cuántas veces se realiza cada trabajo. Revisa los límites de los ciclos,
+incluyendo si avanzan de uno en uno, saltan o se reducen.</li>
+<li>Incluye el costo del cuerpo: llamadas a funciones, copias, búsquedas y ordenaciones.</li>
+<li>Suma fases consecutivas y casos de prueba; para decisiones, considera la rama más costosa posible.</li>
+<li>Resume el crecimiento con O grande y sustituye los máximos del enunciado para estimar la escala.</li>
+<li>Comprueba memoria y, si el tiempo está cerca del límite, mide el algoritmo con entradas exigentes.</li>
+</ol>
+<p>No basta que el programa sea rápido: primero debe dar la respuesta correcta.
+Y un algoritmo O(n²) no está prohibido: puede ser apropiado para unos cientos
+de elementos. La pregunta es si <strong>su trabajo para los límites de este problema</strong>
+cabe en los recursos disponibles.</p>
+<p>La guía <a href="../referencia/complejidad-computacional" class="internal internal-link alias" data-slug="referencia/complejidad-computacional">Complejidad computacional</a> amplía costos de la biblioteca, análisis
+amortizado y otras familias de crecimiento. Esta clase deja las herramientas
+para analizar los recorridos, búsquedas y ordenaciones que ya puedes escribir.</p>
+<h2 id="️-práctica">🏋️ Práctica<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-práctica" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="práctica-directa-contar-y-comparar">Práctica directa: Contar y comparar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#práctica-directa-contar-y-comparar" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Para n=4 y m=3, predice las salidas de los contadores de ciclos consecutivos,
+anidados y parejas. Después reemplaza n y m por 4000 y 3000 y estima las salidas
+sin ejecutarlos. Indica qué cuenta cada número y su complejidad.</p>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Contrastar las cuentas </p></div>
+                  <div class="fold-callout-icon callout-fold"></div>
+                </div>
+<div class="callout-content">
+<p>Consecutivos: 7 y 7000, O(n+m). Anidados: 12 y 12000000, O(n·m).
+Parejas de un vector de tamaño n: 6 y 7998000, O(n²). El contador de
+parejas no usa m. Ninguna de esas salidas es un tiempo en segundos.</p>
+</div>
+</blockquote>
+<h3 id="aplicar-una-fórmula-el-siguiente-múltiplo">Aplicar una fórmula: El siguiente múltiplo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aplicar-una-fórmula-el-siguiente-múltiplo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Lee a,b con <code>0≤a≤10⁹</code>, <code>1≤b≤10⁹</code>. Imprime cuántos +1 faltan para que a sea múltiplo de b. Entrada: <code>10 6</code>. Salida: <code>2</code>.</p>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Idea para comprobar tu solución </p></div>
+                  <div class="fold-callout-icon callout-fold"></div>
+                </div>
+<div class="callout-content">
+<p>El resto es 4; faltan 6−4=2. El caso <code>12 6</code> debe dar 0: usa el resto final de la fórmula.</p>
+</div>
+</blockquote>
+<h3 id="variación-evaluar-dos-planes">Variación: Evaluar dos planes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#variación-evaluar-dos-planes" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Recibes n=200000 datos y q=200000 preguntas de pertenencia. Un plan recorre todo por pregunta; otro ordena una vez y busca binariamente. Estima ambos costos. Después repite con q=1.</p>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Una pista, si la necesitas </p></div>
+                  <div class="fold-callout-icon callout-fold"></div>
+                </div>
+<div class="callout-content">
+<p>Incluye el costo de preparar los datos, aunque se pague solo una vez.</p>
+</div>
+</blockquote>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Contrastar el razonamiento </p></div>
+                  <div class="fold-callout-icon callout-fold"></div>
+                </div>
+<div class="callout-content">
+<p>Con muchas preguntas: O(nq) frente a O(n log n + q log n). Con una sola, recorrer O(n) evita ordenar O(n log n). Las restricciones y la cantidad de consultas cambian qué preparación conviene.</p>
+</div>
+</blockquote>
+<h3 id="aplicar-en-problemas">Aplicar en problemas<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aplicar-en-problemas" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Los problemas siguientes requieren traducir un enunciado y pueden combinar otras ideas. Su procedencia e idioma no indican un orden obligatorio de dificultad.</p>
+<p>Problemas OCI reales, en español (cada nota trae el link a su mirror):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>#</th><th>Problema</th><th>Fase</th><th>Qué practica</th></tr></thead><tbody><tr><td>1</td><td><a href="../oci/2022/contraseña-(oci-2022-regional)" class="internal internal-link alias" data-slug="oci/2022/contraseña-(oci-2022-regional)">Contraseña</a></td><td>Regional 2022</td><td>componer 10⁴ reglas en UN mapeo (la lección en vivo)</td></tr><tr><td>2</td><td><a href="../oci/2017/ocimatic-(oci-2017-regional)" class="internal internal-link alias" data-slug="oci/2017/ocimatic-(oci-2017-regional)">Ocimatic</a></td><td>Regional 2017</td><td>desafío: justificar que tu plan alcanza con D hasta 10¹⁰</td></tr><tr><td>3</td><td>⭐ <a href="../oci/2018/mega-woman-(oci-2018-regional)" class="internal internal-link alias" data-slug="oci/2018/mega-woman-(oci-2018-regional)">Mega Woman</a></td><td>Regional 2018</td><td>ecuación en vez de simular 10¹² pasos</td></tr></tbody></table></div>
+<h3 id="más-aplicaciones-en-inglés">Más aplicaciones (en inglés)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#más-aplicaciones-en-inglés" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>#</th><th>Problema</th><th>Dificultad</th><th>Qué practica</th></tr></thead><tbody><tr><td>1</td><td><a href="https://codeforces.com/problemset/problem/1328/A" class="external external-link" target="_blank">Divisibility Problem (1328A)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★ (800)</td><td>el ciclo que da TLE y la fórmula que no</td></tr><tr><td>2</td><td><a href="https://codeforces.com/problemset/problem/617/A" class="external external-link" target="_blank">Elephant (617A)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★ (800)</td><td>O(1) con división hacia arriba</td></tr><tr><td>3</td><td><a href="https://codeforces.com/problemset/problem/630/A" class="external external-link" target="_blank">Again Twenty Five! (630A)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★★ (800)</td><td>descubrir que la respuesta es constante</td></tr><tr><td>4</td><td>⭐ <a href="https://codeforces.com/problemset/problem/122/A" class="external external-link" target="_blank">Lucky Division (122A)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td><td>★★ (1000)</td><td>fuerza bruta que SÍ cabe (y saber por qué)</td></tr></tbody></table></div>
+<h2 id="un-ejemplo-para-pensar">Un ejemplo para pensar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#un-ejemplo-para-pensar" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Para cada posición <code>i</code> de un arreglo de tamaño <code>n</code>, un ciclo interior
+revisa únicamente las tres posiciones siguientes que existan. Hay dos
+ciclos anidados: ¿el trabajo es necesariamente cuadrático?</p>
+<p>Compara el código y predice su salida antes de ejecutarlo:</p>
+
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 6</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> revisionesA </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, revisionesB </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// A: hasta tres posiciones después de i.</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&amp;&amp;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; j</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        revisionesA</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">// B: todas las posiciones después de i.</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; j </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> n; j</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        revisionesB</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> revisionesA </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot; &quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> revisionesB </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span></code></pre></figure>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Contar repeticiones, no niveles de indentación </p></div>
+                  <div class="fold-callout-icon callout-fold"></div>
+                </div>
+<div class="callout-content">
+<p>Cada una de las <code>n</code> posiciones provoca a lo sumo tres revisiones: no
+más de <code>3n</code> en total. Es O(n). Si el ciclo interior revisara todas las
+posiciones posteriores, haría <code>(n−1) + (n−2) + … + 1 = n(n−1)/2</code>
+revisiones, que sí es O(n²). Lo decisivo es cuántas veces se ejecuta
+el cuerpo, no cuántos ciclos se ven en el código.</p>
+</div>
+</blockquote>
+<hr/>
+<p>← <a href="../ruta/06---conjuntos,-mapas-y-pares" class="internal internal-link alias" data-slug="ruta/06---conjuntos,-mapas-y-pares">06 - Conjuntos, mapas y pares</a> · <a href="../ruta/ruta-de-aprendizaje" class="internal internal-link alias" data-slug="ruta/ruta-de-aprendizaje">Ruta de Aprendizaje</a> · <a href="../ruta/08---búsqueda-binaria" class="internal internal-link alias" data-slug="ruta/08---búsqueda-binaria">08 - Búsqueda binaria</a> →</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Vista Gráfica</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:1,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:3,&quot;showTags&quot;:false,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:1.3,&quot;centerForce&quot;:0.05,&quot;linkDistance&quot;:50,&quot;fontSize&quot;:0.65,&quot;opacityScale&quot;:1.5,&quot;showTags&quot;:false,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-288" aria-expanded="true"><h3>Tabla de Contenidos</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#07--cuánto-se-demora-tu-programa" data-for="07--cuánto-se-demora-tu-programa">07 · ¿Cuánto se demora tu programa?</a></li><li class="depth-1"><a href="#-objetivos" data-for="-objetivos">🎯 Objetivos</a></li><li class="depth-1"><a href="#-la-lección" data-for="-la-lección">📖 La lección</a></li><li class="depth-2"><a href="#primero-qué-queremos-estimar" data-for="primero-qué-queremos-estimar">Primero: ¿qué queremos estimar?</a></li><li class="depth-2"><a href="#contar-operaciones" data-for="contar-operaciones">Contar operaciones</a></li><li class="depth-2"><a href="#ciclos-consecutivos-sumar-los-trabajos" data-for="ciclos-consecutivos-sumar-los-trabajos">Ciclos consecutivos: sumar los trabajos</a></li><li class="depth-2"><a href="#ciclos-anidados-contar-lo-que-se-repite-por-cada-vuelta" data-for="ciclos-anidados-contar-lo-que-se-repite-por-cada-vuelta">Ciclos anidados: contar lo que se repite por cada vuelta</a></li><li class="depth-2"><a href="#cuando-el-ciclo-interior-no-siempre-hace-lo-mismo" data-for="cuando-el-ciclo-interior-no-siempre-hace-lo-mismo">Cuando el ciclo interior no siempre hace lo mismo</a></li><li class="depth-2"><a href="#resumir-el-crecimiento-la-notación-o-grande" data-for="resumir-el-crecimiento-la-notación-o-grande">Resumir el crecimiento: la notación O grande</a></li><li class="depth-2"><a href="#mejor-caso-peor-caso-y-decisiones-del-programa" data-for="mejor-caso-peor-caso-y-decisiones-del-programa">Mejor caso, peor caso y decisiones del programa</a></li><li class="depth-2"><a href="#qué-significa-ese-logaritmo" data-for="qué-significa-ese-logaritmo">Qué significa ese logaritmo</a></li><li class="depth-2"><a href="#también-importa-el-trabajo-dentro-del-ciclo" data-for="también-importa-el-trabajo-dentro-del-ciclo">También importa el trabajo dentro del ciclo</a></li><li class="depth-2"><a href="#varias-consultas-y-varios-casos-de-prueba" data-for="varias-consultas-y-varios-casos-de-prueba">Varias consultas y varios casos de prueba</a></li><li class="depth-2"><a href="#del-conteo-al-límite-de-tiempo" data-for="del-conteo-al-límite-de-tiempo">Del conteo al límite de tiempo</a></li><li class="depth-2"><a href="#de-ciclo-a-fórmula" data-for="de-ciclo-a-fórmula">De ciclo a fórmula</a></li><li class="depth-2"><a href="#cómo-analizar-tu-propio-programa" data-for="cómo-analizar-tu-propio-programa">Cómo analizar tu propio programa</a></li><li class="depth-1"><a href="#️-práctica" data-for="️-práctica">🏋️ Práctica</a></li><li class="depth-2"><a href="#práctica-directa-contar-y-comparar" data-for="práctica-directa-contar-y-comparar">Práctica directa: Contar y comparar</a></li><li class="depth-2"><a href="#aplicar-una-fórmula-el-siguiente-múltiplo" data-for="aplicar-una-fórmula-el-siguiente-múltiplo">Aplicar una fórmula: El siguiente múltiplo</a></li><li class="depth-2"><a href="#variación-evaluar-dos-planes" data-for="variación-evaluar-dos-planes">Variación: Evaluar dos planes</a></li><li class="depth-2"><a href="#aplicar-en-problemas" data-for="aplicar-en-problemas">Aplicar en problemas</a></li><li class="depth-2"><a href="#más-aplicaciones-en-inglés" data-for="más-aplicaciones-en-inglés">Más aplicaciones (en inglés)</a></li><li class="depth-1"><a href="#un-ejemplo-para-pensar" data-for="un-ejemplo-para-pensar">Un ejemplo para pensar</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Retroenlaces</h3><ul id="list-0" class="overflow"><li><a href="../oci/2017/ocimatic-(oci-2017-regional)" class="internal">Ocimatic (OCI 2017 Regional)</a></li><li><a href="../oci/2018/mega-woman-(oci-2018-regional)" class="internal">Mega Woman (OCI 2018 Regional)</a></li><li><a href="../oci/2022/contraseña-(oci-2022-regional)" class="internal">Contraseña (OCI 2022 Regional)</a></li><li><a href="../referencia/complejidad-computacional" class="internal">Complejidad computacional</a></li><li><a href="../ruta/02---la-competencia-y-la-estrategia" class="internal">02 - La competencia y la estrategia</a></li><li><a href="../ruta/04---matrices" class="internal">04 - Matrices</a></li><li><a href="../ruta/06---conjuntos,-mapas-y-pares" class="internal">06 - Conjuntos, mapas y pares</a></li><li><a href="../ruta/08---búsqueda-binaria" class="internal">08 - Búsqueda binaria</a></li><li><a href="../ruta/09---recursión" class="internal">09 - Recursión</a></li><li><a href="../ruta/11---colas-de-prioridad" class="internal">11 - Colas de prioridad</a></li><li><a href="../ruta/13---backtracking" class="internal">13 - Backtracking</a></li><li><a href="../ruta/diagnóstico-y-dominio" class="internal">Por dónde empezar</a></li><li><a href="../ruta/ruta-de-aprendizaje" class="internal">Ruta de Aprendizaje</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Creado con <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://ioinformatics.org/">IOI oficial</a></li><li><a href="https://oj.uz/problems/source/IOI">Juez oj.uz</a></li><li><a href="https://quartz.jzhao.xyz/">Hecho con Quartz</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5e811136.js" type="application/javascript" data-persist="true"></script><script src="../postscript-c7ad6985.js" type="module" data-persist="true"></script></html>
